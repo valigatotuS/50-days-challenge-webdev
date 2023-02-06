@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+    <title>Cards</title>
+</head>
+<body>
+    <h1>Cards</h1>
+
+    <!-- // cards elements... -->
+    <div class="cards-container">
+        <div class="card active" id="card1">
+            <span>card 1</span>
+        </div>
+        <div class="card" id="card2">
+            <span>card 2</span>
+        </div>
+        <div class="card" id="card3">
+            <span>card 3</span>
+        </div>
+
+        <div class="card" id="card4">
+            <span>card 4</span>
+        </div>
+    </div>
+
+    <!-- add bottom footer with my initials -->
+    <div class="footer">
+        <span>© 2023 - Valentin Quevy <a href="linkdin.com">connect</a></span>
+    </div>
+
+    <script>
+        // Get all cards
+const cards = document.querySelectorAll('.card');
+
+// Add click event listener to all cards
+cards.forEach(card => {
+  card.addEventListener('click', function() {
+    // Remove active class from all cards
+    cards.forEach(c => {
+      c.classList.remove('active');
+    });
+    // Add active class to the selected card
+    this.classList.add('active');
+  });
+});
+
+$(".card").hover(function() {
+    $(this).css("transform", "scale(1.2)");
+  }, function() {
+    $(this).css("transform", "scale(1)");
+  });
+    </script>
+
+</body>
+</html>
