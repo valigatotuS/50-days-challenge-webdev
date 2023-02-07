@@ -1,0 +1,116 @@
+/* reset all the default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    color: #333;
+}
+
+h1{
+    font-size: 20px;
+    color: #333;
+    margin: 60px;
+}
+
+.main-container{
+    width: 600px;
+    background-color: rgba(51, 51, 51, 0.355);
+    /* center in midlle of page */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    padding: 0 50px;
+    border-radius: 10px;
+}
+
+.progression-bar {
+    width: 600px;
+    height: 75px;
+}
+
+.progression-bar .border{
+    width: 96%;
+    height: 15%;
+    background: #fff;
+    border-radius: 10px;
+    border: 2px solid rgb(67, 106, 185);
+    overflow: hidden;
+    /* center in middle of box */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.progression-bar #progression {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background: rgb(158, 219, 238);
+    border-radius: 10px;
+    overflow: hidden;
+    /* position in middle left */
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    
+}
+
+.progression-bar .steps{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1%;
+    /* //display on top of progression */
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+
+.progression-bar .steps .step{
+    width: 4%;
+    height: 35%;
+    background-color: #fff;
+    border: 2px solid rgb(67, 106, 185);
+    padding: 5px;;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+}
+
+.progression-bar .steps .step-1{
+    background-color: rgb(158, 219, 238);
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #333;
+    color: red;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.footer span{
+    color: white
+}
